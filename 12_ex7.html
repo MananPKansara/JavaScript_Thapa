@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="num"></div>
+    <input type="button" value="Click" id="btn">
+    <input type="button" value="Stop" id="btn2">
+</body>
+<script>
+    var num = 0;
+    let ref;
+    const btn  = document.getElementById("btn");
+    const btn2  = document.getElementById("btn2");
+    btn.addEventListener("click", () => {
+        ref = setInterval(() => {
+             num ++ 
+             document.getElementById("num").innerHTML = num;
+        }, 1000)
+    })
+    btn2.addEventListener("click", () => {
+        clearInterval(ref);
+    })
+</script>
+</html>

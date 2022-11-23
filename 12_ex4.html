@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter the name : 
+    <br>
+    <input type="text"  onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()" >
+    <div id="ip"></div>
+</body>
+<script>
+    const ip = document.getElementById("ip");
+    const keyPress = () => {
+        ip.innerHTML = `You press ${event.key} and it's code is ${event.code}`;
+        console.log("key is pressed");
+    }
+    const keyDown = () => {
+        ip.innerHTML = `Key is down`;
+        console.log("key is down");
+    }
+    const keyUp = () => {
+        ip.innerHTML = `Key is up`;
+        console.log("key is up");
+    }
+
+    // key press and key up/down are clear when we understand them dff from each other
+</script>
+</html>

@@ -1,0 +1,9 @@
+Javascript improves the user experience of the web page by converting it from a static page into an intteractive one. 
+
+Javascript adds behaviour to web page.
+
+HTML : describes the structure of the web page
+
+CSS : describes how HTML elements are to be displayed on screen.
+
+In VS code install "Babel JavaScript" extension.

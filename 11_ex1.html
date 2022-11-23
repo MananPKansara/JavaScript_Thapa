@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Navigate through the DOM</title>
+</head>
+<body>
+    <div class="main-div">
+        <div class="child-one">I am child one</div>
+        <div class="child-two">I am child two</div>
+        <div class="child-three">I am child three</div>
+    </div>
+    <div class="text" id="text">The content of this will be changed after clicking the button</div>
+    <input type="button" value="CLick" id="btn" onClick="changeText()">        
+</body>
+<script>
+    function changeText(){
+        document.getElementById("text").innerHTML = "The content has been changed";
+    }
+</script>
+</html>
+
+<!-- 
+    1. document.documentElement => return the root element of the document
+    2. document.head
+    3. document.body
+    4. childNodes 
+    5. childrens 
+    6. firstChild vs firstElementChild
+    7. lastChild vs lastElementChild
+    => The main difference between children and childNodes property is that children work upon elements and childNodes on nodes including non-element nodes like text and comment nodes.
+    select div.main-div in elements
+    $0.childNodes
+    $0.firstChild
+    $0.children 
+    $0.firstElemetChild
+    $0.firstElementChild.style.color = "red"
+    8. hasChildNodes() => check wether an emelemnt has child nodes or not
+    9. parentElement
+    10.paretNodes
+    11.previousSibling vs previousElementSiblings
+    12.nextSibling vs nextElementSiblings
+    13.getElementById()
+    14.getElementsByClassName()
+    15.getElementsByName()
+    16.querySelector() => it returns the first matching value. We can give id, classname or tag name
+    17.quesrySelectorAll() => it returns al matching elements
+ -->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="first" onclick="alert('you have clicked the first button and it is made with onclick')">first button</button>
+    <button class="second" onclick="clicked()">second button</button>
+    <button class="third">third button</button>
+    <button class="fourth">fourth button</button>
+</body>
+<script>
+    third = document.getElementsByClassName("third");
+    fourth = document.getElementsByClassName("fourth");
+    
+    // here we have called onclick function four time so it will not execute the program. But if we use addEventListner then there will be no problem. 
+    // addEventListner does not overwrite existing event handlers whereas onclick overrides any existing onclick event handler
+    
+    clicked = function(){
+        alert("you have clicked the second button and it is made of onclik and it return the function");
+    }
+
+    document.getElementsByClassName("third").onclick = function(){
+    alert('you have clicked third button');
+    }
+
+    document.getElementsByClassName("fourth").addEventListner('click', () => {
+        alert('you have clicked third button');
+    })
+</script>
+</html>

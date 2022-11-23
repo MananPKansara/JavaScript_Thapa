@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Want to know my name ?</div>
+    <div id="txt"></div>
+    <input type="button" id="btn" value="Click Me">
+    <br><br>
+    <div id="para">Click "Tyr it" wait for 3 sec. After 3 sec alert will be displayed. If we click the stop button then alert will not be displayed.</div>
+    <input type="button" value="Try It" id="btn2" onclick="myvar = setTimeout(myFunction,2000)">
+    <input type="button" value="Stop" id="btn3" onclick="clearTimeout(myvar)">
+</body>
+<script>
+    const txt = document.getElementById("txt");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener('click', () => {
+        txt.innerHTML = "Loading...."
+        setTimeout(() => {
+            txt.innerHTML = "Manan";
+        },1000);
+    })
+
+    // we have to pass the reference of the setRimeout in the clearYimeout  
+
+    myFunction = () => {
+        alert("alert box");
+    }
+
+</script>
+</html>
